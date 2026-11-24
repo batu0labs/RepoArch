@@ -99,7 +99,7 @@ repo-architect/
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/repo-architect.git
+git clone https://github.com/batu0labs/RepoArch
 cd repo-architect
 
 # Install in editable mode
