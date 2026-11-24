@@ -1,4 +1,4 @@
-# Repo-Architect 🏛️
+# Repo-Architect
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Privacy: 100% Local](https://img.shields.io/badge/privacy-100%25%20local-success.svg)](#1-core-architectural--privacy-constraints)
@@ -99,7 +99,7 @@ repo-architect/
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/repo-architect.git
+git clone https://github.com/batu0labs/RepoArch
 cd repo-architect
 
 # Install in editable mode
