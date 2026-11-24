@@ -2,7 +2,7 @@
 
 > **Local-First Codebase Architecture Analysis**  
 > *Local-first codebase architecture and structural overview.*  
-> Generated: 2026-11-24 17:32:08 • **100% Local Execution**
+> Generated: 2026-11-24 18:39:06 • **100% Local Execution**
 
 ---
 
@@ -13,7 +13,7 @@ Repo-Arch is organized into 3 primary subsystem(s) encompassing 13 source module
 ### Architectural Principles & Highlights
 - Privacy-Preserving Architecture: Operates entirely offline with zero cloud telemetry.
 - Modular Subsystem Partitioning: Clear separation between ingestion, parsing, synthesis, and rendering.
-- Dependency Health: 5 external third-party package dependency footprint.
+- Dependency Health: 6 external third-party package dependency footprint.
 
 ## 2. High-Level System Flowchart
 
@@ -58,11 +58,11 @@ flowchart TD
     tests_test_renderer_py --> src_repo_architect_scanner_py
     tests_test_scanner_py --> src_repo_architect_scanner_py
     subgraph ext_deps ["External Dependencies"]
+        ext_httpx["httpx"]:::external
         ext_openai["openai"]:::external
         ext_pathspec["pathspec"]:::external
         ext_pydantic["pydantic"]:::external
         ext_rich["rich"]:::external
-        ext_typer["typer"]:::external
     end
 ```
 
@@ -115,12 +115,12 @@ Subsystem managing 3 module(s) within the 'tests' domain.
 
 ## 6. Privacy Guard & Security Verification
 
-- **Zero External Egress:** Analysis generated via deterministic static AST heuristics (Offline mode requested). Strictly local execution verified.
+- **Zero External Egress:** Analysis generated via deterministic static AST heuristics (Local LLM (http://localhost:11434/v1, model=qwen2.5-coder) unavailable or returned error: Connection error.). Strictly local execution verified.
 - **Files Visited:** 14
 - **Files Indexed:** 13
-- **Files Excluded (Strict Guard & .gitignore):** 4
+- **Files Excluded (Strict Guard & .gitignore):** 5
 - **Masked Secrets:** 11
-- **Exclusion Breakdown:** strict_dir: 3, strict_file_pattern: 1
+- **Exclusion Breakdown:** strict_dir: 4, strict_file_pattern: 1
 
 ---
 *Report generated locally by [Repo-Architect](https://github.com/)*

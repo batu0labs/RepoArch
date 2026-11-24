@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import httpx
 from openai import OpenAI
 from pydantic import BaseModel, Field
 
@@ -103,7 +104,7 @@ class ArchitectureAgent:
         self.client = OpenAI(
             base_url=self.base_url,
             api_key=self.api_key,
-            timeout=float(self.timeout),
+            timeout=httpx.Timeout(float(self.timeout), connect=3.0),
         )
 
     def analyze(
